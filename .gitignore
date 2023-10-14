@@ -2,3 +2,5 @@
 /mc-banking.iml
 /docker/db-data
 /node_modules
+/dist
+/typeorm.json
