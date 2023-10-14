@@ -30,7 +30,7 @@ Creates a user account
 
 Retrieves information about current user account
 
-### ```GET /api/transactions```
+### ```GET /api/transactions[?take=10][&page=1]```
 
 Retrieves transactions of current authenticated user
 
