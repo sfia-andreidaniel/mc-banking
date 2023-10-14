@@ -6,6 +6,8 @@ services:
       - ./docker/env/database.env
     volumes:
       - ./docker/db-data:/var/lib/mysql
+    ports:
+      - "3307:3306"
     deploy:
       replicas: 1
 
