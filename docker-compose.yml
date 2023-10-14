@@ -6,5 +6,20 @@ services:
       - ./docker/env/database.env
     volumes:
       - ./docker/db-data:/var/lib/mysql
+    deploy:
+      replicas: 1
+
+  mc-banking:
+    build:
+      context: .
     ports:
-      - "3307:3306"
+      - "3000:3000"
+    links:
+      - database
+    depends_on:
+      - database
+    env_file:
+      - ./docker/env/mc-banking.env
+      - ./docker/env/database.env
+    deploy:
+      replicas: 1
