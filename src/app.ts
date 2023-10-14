@@ -1,5 +1,9 @@
-import express from 'express';
+import {loadEnvFromFileIfExists} from "./config/dev-env-load-from-file";
 
+loadEnvFromFileIfExists(__dirname + '/../docker/env/database.env');
+loadEnvFromFileIfExists(__dirname + '/../docker/env/mc-banking.env');
+
+import express from 'express';
 require("reflect-metadata");
 import bodyParser from 'body-parser';
 import authenticationRouter from './routes/authenticationRouter';
